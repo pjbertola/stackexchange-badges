@@ -12,44 +12,61 @@ import WebKit
 
 class LoginWebViewController: UIViewController {
 
-        //MARK: - Properties
-        let webView = WKWebView()
-        let redirectURI = "https://pjb.com.ar/login_success"
-        let clientId = "17994"
+    //MARK: - Properties
+    let webView = WKWebView()
+
+    var repository: StackUserRepository!
+
+    //MARK: - Methods
+    override func loadView() {
+        self.view = webView
+        webView.scrollView.bounces = false
+    }
     
-        //MARK: - Methods
-        override func loadView() {
-            self.view = webView
-            webView.scrollView.bounces = false
-        }
+    override func viewDidLoad() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        webView.navigationDelegate = self
         
-        override func viewDidLoad() {
-            navigationController?.setNavigationBarHidden(true, animated: false)
-            webView.navigationDelegate = self
-
-            let baseURL = "https://stackoverflow.com/oauth?client_id=\(clientId)&scope=private_info&redirect_uri=\(redirectURI)"
-
-            if let url = URL(string: baseURL){
-                let request = URLRequest(url: url)
-                webView.load(request)
-            }
-        }
-        override func viewWillDisappear(_ animated: Bool) {
-            navigationController?.setNavigationBarHidden(false, animated: false)
+        if let url = StackEndpoint.oauth.url{
+            let request = URLRequest(url: url)
+            webView.load(request)
         }
     }
-    extension LoginWebViewController: WKNavigationDelegate {
-        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-                if let url = navigationAction.request.url {
-                    print("PJB!!!!!!!! URL: " + url.absoluteString)
-                    
-                    if url.absoluteString.starts(with: redirectURI) {
-                        //get values here
-                        decisionHandler(.cancel)
-                        navigationController?.popViewController(animated: true)
-                        return
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+
+}
+
+//MARK:- WKNavigationDelegate
+extension LoginWebViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            if let url = navigationAction.request.url {
+                print("PJB!!!!!!!! URL: " + url.absoluteString)
+                
+                if url.absoluteString.starts(with: StackExchangeApp.redirect.rawValue) {
+                    if let code = getCode(from: url.absoluteString) {
+                        repository.setLoginCode(code)
                     }
+                    decisionHandler(.cancel)
+                    navigationController?.popViewController(animated: true)
+                    return
                 }
-                decisionHandler(.allow)
+            }
+            decisionHandler(.allow)
+    }
+    
+    func getCode(from urlStr:String) -> String? {
+        let parts = urlStr.split(separator: "&")
+        for part in parts {
+            if part.contains("code") {
+                let codeArray = part.split(separator: "=")
+                if let code = codeArray.last{
+                    return String(code)
+                }
+            }
         }
+        return nil
+    }
 }
