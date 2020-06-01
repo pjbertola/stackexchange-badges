@@ -21,32 +21,20 @@
                                     <constraint firstAttribute="width" secondItem="FnN-3R-BZh" secondAttribute="height" multiplier="1:1" id="IGE-gi-CwB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fq-uj-Su4" userLabel="Name Lb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fq-uj-Su4" userLabel="Name Lb">
                                 <rect key="frame" x="184.5" y="87" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Badge Count:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g81-jz-Lt1" userLabel="Badge Count Lb">
-                                <rect key="frame" x="0.0" y="345" width="207" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reputation:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRH-gP-dBA" userLabel="Reputation Lb">
-                                <rect key="frame" x="0.0" y="381" width="207" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTg-bC-tXe" userLabel="Badge Value Lb">
-                                <rect key="frame" x="217" y="345" width="187" height="21"/>
+                                <rect key="frame" x="202" y="345" width="10.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BD-Z1-K9y" userLabel="Reputation Value Lb">
-                                <rect key="frame" x="217" y="381" width="187" height="21"/>
+                                <rect key="frame" x="202" y="381" width="10.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,27 +42,25 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="vTg-bC-tXe" firstAttribute="top" secondItem="FnN-3R-BZh" secondAttribute="bottom" constant="15" id="7Ns-lr-h49"/>
                             <constraint firstItem="FnN-3R-BZh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.5" id="7dI-ge-DEi"/>
-                            <constraint firstItem="g81-jz-Lt1" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="D6e-dx-dZG"/>
+                            <constraint firstItem="2BD-Z1-K9y" firstAttribute="top" secondItem="vTg-bC-tXe" secondAttribute="bottom" constant="15" id="7wH-Kv-00F"/>
                             <constraint firstItem="FnN-3R-BZh" firstAttribute="width" secondItem="FnN-3R-BZh" secondAttribute="height" multiplier="1:1" id="K9N-5p-LdD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vTg-bC-tXe" secondAttribute="trailing" constant="10" id="Ka7-lW-XcY"/>
                             <constraint firstItem="FnN-3R-BZh" firstAttribute="top" secondItem="8Fq-uj-Su4" secondAttribute="bottom" constant="15" id="N8q-BD-k2G"/>
-                            <constraint firstItem="JRH-gP-dBA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.5" id="PRe-3h-rHq"/>
-                            <constraint firstItem="2BD-Z1-K9y" firstAttribute="centerY" secondItem="JRH-gP-dBA" secondAttribute="centerY" id="Pbr-L9-mfr"/>
                             <constraint firstItem="FnN-3R-BZh" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="Psw-BX-yOe"/>
                             <constraint firstItem="FnN-3R-BZh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RSI-Td-lwK"/>
-                            <constraint firstItem="vTg-bC-tXe" firstAttribute="leading" secondItem="g81-jz-Lt1" secondAttribute="trailing" constant="10" id="SbP-tg-SCd"/>
-                            <constraint firstItem="JRH-gP-dBA" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="Te4-4p-evT"/>
-                            <constraint firstItem="vTg-bC-tXe" firstAttribute="centerY" secondItem="g81-jz-Lt1" secondAttribute="centerY" id="Vir-eF-LOR"/>
-                            <constraint firstItem="g81-jz-Lt1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.5" id="cdF-wV-LQj"/>
-                            <constraint firstItem="JRH-gP-dBA" firstAttribute="top" secondItem="g81-jz-Lt1" secondAttribute="bottom" constant="15" id="gjB-hf-Pbu"/>
-                            <constraint firstItem="2BD-Z1-K9y" firstAttribute="leading" secondItem="JRH-gP-dBA" secondAttribute="trailing" constant="10" id="hbC-BV-42W"/>
-                            <constraint firstItem="g81-jz-Lt1" firstAttribute="top" secondItem="FnN-3R-BZh" secondAttribute="bottom" constant="15" id="kRT-UV-iai"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2BD-Z1-K9y" secondAttribute="trailing" constant="10" id="oUc-gL-2oA"/>
+                            <constraint firstItem="vTg-bC-tXe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VDt-QO-AeD"/>
+                            <constraint firstItem="2BD-Z1-K9y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pNw-8I-RMt"/>
                             <constraint firstItem="8Fq-uj-Su4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="reG-nh-mcq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ImageView" destination="FnN-3R-BZh" id="XBn-4T-Itg"/>
+                        <outlet property="badgeValueLb" destination="vTg-bC-tXe" id="dAU-5J-qee"/>
+                        <outlet property="nameLb" destination="8Fq-uj-Su4" id="nIu-bg-i7y"/>
+                        <outlet property="reputationValueLb" destination="2BD-Z1-K9y" id="htW-ox-6nZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
