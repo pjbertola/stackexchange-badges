@@ -1,5 +1,5 @@
 //
-//  BadgetViewModel.swift
+//  BadgeViewModel.swift
 //  StackExchangeBadges
 //
 //  Created by Pablo Javier Bertola on 02/06/2020.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol BadgetViewModel {
-    static func from(badget: Badget) -> BadgetViewModel
+protocol BadgeViewModel {
+    static func from(badge: Badge) -> BadgeViewModel
 }

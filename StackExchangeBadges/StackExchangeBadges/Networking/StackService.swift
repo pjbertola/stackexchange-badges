@@ -90,9 +90,9 @@ class StackService{
                task.resume()
     }
     
-    /// Get My Badgets
+    /// Get My Badges
     /// - Parameter completion: handler
-    func getMyBadgets(completion: ServiceCompletionHandler?){
+    func getMyBadges(completion: ServiceCompletionHandler?){
         guard let token = repository.accessToken else {
             completion?(false, nil)
             return
@@ -106,11 +106,11 @@ class StackService{
                let task = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
                    do {
                        guard let data = data else { return }
-                       let badgetData = try JSONDecoder().decode(BaseData<Badget>.self, from: data)
+                       let badgeData = try JSONDecoder().decode(BaseData<Badge>.self, from: data)
                                        
                        DispatchQueue.main.async {
-                        if let badgetList = badgetData.items {
-                            self?.repository.setMyBadgets(badgetList)
+                        if let badgeList = badgeData.items {
+                            self?.repository.setMyBadges(badgeList)
                        }
                         completion?(true,  nil)
                     }

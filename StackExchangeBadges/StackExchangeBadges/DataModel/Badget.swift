@@ -1,5 +1,5 @@
 //
-//  Badget.swift
+//  Badge.swift
 //  StackExchangeBadges
 //
 //  Created by Pablo Javier Bertola on 02/06/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Badget: Codable {
+struct Badge: Codable {
     var id: Int
     var rank: String
     var description: String

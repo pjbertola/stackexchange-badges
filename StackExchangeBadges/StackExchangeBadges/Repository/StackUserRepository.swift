@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum SortBadget {
+enum SortBadge {
     case id
     case rank
 }
-enum BadgetRank: String, CaseIterable {
+enum BadgeRank: String, CaseIterable {
     case gold
     case silver
     case bronze
@@ -21,8 +21,8 @@ protocol StackUserRepository {
     var user: User? { get }
     var code: String? { get }
     var accessToken: String? { get }
-    var myBadgets: [Badget] { get }
-    var myBadgetsSort: SortBadget { get }
+    var myBadges: [Badge] { get }
+    var myBadgesSort: SortBadge { get }
     
     //Read
     func getUserHome() -> UserHome?
@@ -32,8 +32,8 @@ protocol StackUserRepository {
     func setLoginCode(_ code: String)
     func setToken(_ code: String)
     func clearLogin()
-    func setMyBadgets(_ bagdets: [Badget])
-    func getChangedSortMyBudget() -> [MyBadget]
+    func setMyBadges(_ badges: [Badge])
+    func getChangedSortMyBudget() -> [MyBadge]
 }
 
 
@@ -44,8 +44,8 @@ class StackUser: StackUserRepository {
     private(set) var user: User?
     private(set) var code: String?
     private(set) var accessToken: String?
-    private(set) var myBadgets: [Badget] = []
-    private(set) var myBadgetsSort = SortBadget.id
+    private(set) var myBadges: [Badge] = []
+    private(set) var myBadgesSort = SortBadge.id
     
     //MARK:- Methods
     init() {
@@ -63,36 +63,36 @@ class StackUser: StackUserRepository {
         return UserHome.from(user: user) as? UserHome
     }
     
-    private func getMyBudgets(sortBy: SortBadget = .id) -> [MyBadget] {
-        let sortedBadgets = myBadgets.sorted {
+    private func getMyBudgets(sortBy: SortBadge = .id) -> [MyBadge] {
+        let sortedBadges = myBadges.sorted {
             switch (sortBy) {
             case .id:
                 return $0.id < $1.id
             case .rank:
-                if let rank0 = BadgetRank(rawValue: $0.rank),
-                    let rank1 = BadgetRank(rawValue: $1.rank) {
-                    let index0 = BadgetRank.allCases.firstIndex(of: rank0) ?? BadgetRank.allCases.count
-                    let index1 = BadgetRank.allCases.firstIndex(of: rank1) ?? BadgetRank.allCases.count
+                if let rank0 = BadgeRank(rawValue: $0.rank),
+                    let rank1 = BadgeRank(rawValue: $1.rank) {
+                    let index0 = BadgeRank.allCases.firstIndex(of: rank0) ?? BadgeRank.allCases.count
+                    let index1 = BadgeRank.allCases.firstIndex(of: rank1) ?? BadgeRank.allCases.count
                     return index0 < index1
                 } else {
                     return false
                 }
             }
         }
-        var badgetList = [MyBadget]()
-        for badget in sortedBadgets {
-            badgetList.append(MyBadget.from(badget: badget) as! MyBadget)
+        var badgeList = [MyBadge]()
+        for badge in sortedBadges {
+            badgeList.append(MyBadge.from(badge: badge) as! MyBadge)
         }
-        return badgetList
+        return badgeList
     }
-    func getChangedSortMyBudget() -> [MyBadget] {
-        switch myBadgetsSort {
+    func getChangedSortMyBudget() -> [MyBadge] {
+        switch myBadgesSort {
         case .id:
-            myBadgetsSort = .rank
+            myBadgesSort = .rank
         case .rank:
-            myBadgetsSort = .id
+            myBadgesSort = .id
         }
-        return getMyBudgets(sortBy: myBadgetsSort)
+        return getMyBudgets(sortBy: myBadgesSort)
     }
     
     
@@ -114,7 +114,7 @@ class StackUser: StackUserRepository {
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "AccessToken")
     }
-    func setMyBadgets(_ bagdets: [Badget]) {
-        self.myBadgets = bagdets
+    func setMyBadges(_ badges: [Badge]) {
+        self.myBadges = badges
     }
 }

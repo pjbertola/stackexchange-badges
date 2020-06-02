@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? MyBadgetsViewControllers {
+        if let vc = segue.destination as? MyBadgesViewControllers {
             vc.service = service
             vc.repository = repository
         }

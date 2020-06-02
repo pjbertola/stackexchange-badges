@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--My Badgets View Controllers-->
+        <!--My Badges View Controllers-->
         <scene sceneID="Ov7-CR-Pl9">
             <objects>
-                <viewController id="7oS-jL-lun" customClass="MyBadgetsViewControllers" customModule="StackExchangeBadges" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7oS-jL-lun" customClass="MyBadgesViewControllers" customModule="StackExchangeBadges" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JLn-8G-fti">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

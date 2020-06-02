@@ -1,5 +1,5 @@
 //
-//  MyBadgetsViewControllers.swift
+//  MyBadgesViewControllers.swift
 //  StackExchangeBadges
 //
 //  Created by Pablo Javier Bertola on 02/06/2020.
@@ -8,27 +8,27 @@
 
 import Foundation
 import UIKit
-class MyBadgetsViewControllers: UIViewController {
+class MyBadgesViewControllers: UIViewController {
     //MARK:- Properties
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var viewsToHide: [UIView]!
     
-    var badgetList = [MyBadget]()
+    var badgeList = [MyBadge]()
     var repository: StackUserRepository!
     var service: StackService!
     
     //MARK:- Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: BadgetTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: BadgetTableViewCell.identifier)
+        tableView.register(UINib(nibName: BadgeTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: BadgeTableViewCell.identifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
         viewsToHide.hide(animated: false)
-        service.getMyBadgets {[weak self] (success, error) in
+        service.getMyBadges {[weak self] (success, error) in
             if success {
                 if let list = self?.repository.getChangedSortMyBudget(){
-                    self?.badgetList = list
+                    self?.badgeList = list
                     self?.tableView.reloadData()
                 }
             }
@@ -36,19 +36,19 @@ class MyBadgetsViewControllers: UIViewController {
         }
     }
     @IBAction func changeSort(_ sender: UIButton) {
-        badgetList = repository.getChangedSortMyBudget()
+        badgeList = repository.getChangedSortMyBudget()
         tableView.reloadData()
     }
     
 }
-extension MyBadgetsViewControllers: UITableViewDelegate, UITableViewDataSource {
+extension MyBadgesViewControllers: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        badgetList.count
+        badgeList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BadgetTableViewCell.identifier, for: indexPath) as? BadgetTableViewCell
-        cell?.setUp(myBadget: badgetList[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: BadgeTableViewCell.identifier, for: indexPath) as? BadgeTableViewCell
+        cell?.setUp(myBadge: badgeList[indexPath.row])
         return cell ?? UITableViewCell()
     }
 }
