@@ -67,7 +67,6 @@ class StackService{
                let task = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
                    do {
                        guard let data = data else { return }
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
                        let userData = try JSONDecoder().decode(UserData.self, from: data)
                                        
                        DispatchQueue.main.async {

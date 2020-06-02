@@ -27,13 +27,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTg-bC-tXe" userLabel="Badge Value Lb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTg-bC-tXe">
                                 <rect key="frame" x="202" y="356" width="10.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BD-Z1-K9y" userLabel="Reputation Value Lb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BD-Z1-K9y">
                                 <rect key="frame" x="202" y="392" width="10.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -58,9 +58,13 @@
                     <navigationItem key="navigationItem" id="3zH-Pa-5cM"/>
                     <connections>
                         <outlet property="ImageView" destination="FnN-3R-BZh" id="XBn-4T-Itg"/>
-                        <outlet property="badgeValueLb" destination="vTg-bC-tXe" id="dAU-5J-qee"/>
+                        <outlet property="badgeLb" destination="vTg-bC-tXe" id="btS-8q-b3P"/>
                         <outlet property="nameLb" destination="8Fq-uj-Su4" id="nIu-bg-i7y"/>
-                        <outlet property="reputationValueLb" destination="2BD-Z1-K9y" id="htW-ox-6nZ"/>
+                        <outlet property="reputationLb" destination="2BD-Z1-K9y" id="g7O-MK-rX4"/>
+                        <outletCollection property="viewsToHide" destination="8Fq-uj-Su4" collectionClass="NSMutableArray" id="U8X-9p-yGo"/>
+                        <outletCollection property="viewsToHide" destination="FnN-3R-BZh" collectionClass="NSMutableArray" id="AJb-UR-Sh6"/>
+                        <outletCollection property="viewsToHide" destination="vTg-bC-tXe" collectionClass="NSMutableArray" id="VcN-dr-BgL"/>
+                        <outletCollection property="viewsToHide" destination="2BD-Z1-K9y" collectionClass="NSMutableArray" id="CfP-bz-dWW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

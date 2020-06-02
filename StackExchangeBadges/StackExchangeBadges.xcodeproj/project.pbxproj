@@ -16,6 +16,10 @@
 		58B480D12485448900BA8111 /* StackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480D02485448900BA8111 /* StackService.swift */; };
 		58B480D324857F7600BA8111 /* StackEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480D224857F7600BA8111 /* StackEndpoint.swift */; };
 		58B480D52485818300BA8111 /* StackListings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480D42485818300BA8111 /* StackListings.swift */; };
+		58B480D82485FF3800BA8111 /* UIImageView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480D72485FF3800BA8111 /* UIImageView+Utilities.swift */; };
+		58B480DA2485FF8600BA8111 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480D92485FF8600BA8111 /* UserHome.swift */; };
+		58B480DC248603B900BA8111 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480DB248603B900BA8111 /* UserViewModel.swift */; };
+		58B480DF24860EA100BA8111 /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480DE24860EA100BA8111 /* Array+Utilities.swift */; };
 		58F52D322484935800E82594 /* LoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F52D312484935800E82594 /* LoginWebViewController.swift */; };
 		58F52D3524849E5600E82594 /* StackUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F52D3424849E5600E82594 /* StackUserRepository.swift */; };
 		58F52D382484A1E800E82594 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F52D372484A1E800E82594 /* User.swift */; };
@@ -34,6 +38,10 @@
 		58B480D02485448900BA8111 /* StackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackService.swift; sourceTree = "<group>"; };
 		58B480D224857F7600BA8111 /* StackEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackEndpoint.swift; sourceTree = "<group>"; };
 		58B480D42485818300BA8111 /* StackListings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackListings.swift; sourceTree = "<group>"; };
+		58B480D72485FF3800BA8111 /* UIImageView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utilities.swift"; sourceTree = "<group>"; };
+		58B480D92485FF8600BA8111 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
+		58B480DB248603B900BA8111 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		58B480DE24860EA100BA8111 /* Array+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utilities.swift"; sourceTree = "<group>"; };
 		58F52D312484935800E82594 /* LoginWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebViewController.swift; sourceTree = "<group>"; };
 		58F52D3424849E5600E82594 /* StackUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackUserRepository.swift; sourceTree = "<group>"; };
 		58F52D372484A1E800E82594 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -70,6 +78,7 @@
 		5805B1B824843D39003C9FCC /* StackExchangeBadges */ = {
 			isa = PBXGroup;
 			children = (
+				58B480DD24860E3100BA8111 /* Utilities */,
 				58B480D62485B08E00BA8111 /* ViewModels */,
 				58B480CF2485445A00BA8111 /* Networking */,
 				58F52D362484A1AB00E82594 /* DataModel */,
@@ -114,8 +123,19 @@
 		58B480D62485B08E00BA8111 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				58B480D92485FF8600BA8111 /* UserHome.swift */,
+				58B480DB248603B900BA8111 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		58B480DD24860E3100BA8111 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				58B480D72485FF3800BA8111 /* UIImageView+Utilities.swift */,
+				58B480DE24860EA100BA8111 /* Array+Utilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		58F52D3324849DF800E82594 /* Repository */ = {
@@ -207,13 +227,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B480DF24860EA100BA8111 /* Array+Utilities.swift in Sources */,
 				5805B1BE24843D39003C9FCC /* HomeViewController.swift in Sources */,
+				58B480DA2485FF8600BA8111 /* UserHome.swift in Sources */,
 				58F52D322484935800E82594 /* LoginWebViewController.swift in Sources */,
 				58F52D382484A1E800E82594 /* User.swift in Sources */,
 				5805B1BA24843D39003C9FCC /* AppDelegate.swift in Sources */,
 				58B480D12485448900BA8111 /* StackService.swift in Sources */,
 				58B480D52485818300BA8111 /* StackListings.swift in Sources */,
 				5805B1BC24843D39003C9FCC /* SceneDelegate.swift in Sources */,
+				58B480D82485FF3800BA8111 /* UIImageView+Utilities.swift in Sources */,
+				58B480DC248603B900BA8111 /* UserViewModel.swift in Sources */,
 				58F52D3A2484A2D200E82594 /* BadgeCounts.swift in Sources */,
 				58B480D324857F7600BA8111 /* StackEndpoint.swift in Sources */,
 				58F52D3524849E5600E82594 /* StackUserRepository.swift in Sources */,

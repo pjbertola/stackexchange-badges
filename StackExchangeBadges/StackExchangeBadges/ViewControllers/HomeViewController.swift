@@ -14,8 +14,10 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var nameLb: UILabel!
     @IBOutlet weak var ImageView: UIImageView!
-    @IBOutlet weak var badgeValueLb: UILabel!
-    @IBOutlet weak var reputationValueLb: UILabel!
+    @IBOutlet weak var badgeLb: UILabel!
+    @IBOutlet weak var reputationLb: UILabel!
+    @IBOutlet var viewsToHide: [UIView]!
+    
     var repository: StackUserRepository!
     var service: StackService!
     
@@ -39,6 +41,7 @@ class HomeViewController: UIViewController {
     }
     
     func showLogin() {
+        viewsToHide.hide(animated: false)
         let loginVC = LoginWebViewController()
         loginVC.repository = repository
         show(loginVC, sender: self)
@@ -71,7 +74,7 @@ class HomeViewController: UIViewController {
     }
     
     func getMe(){
-        //get user
+        viewsToHide.hide(animated: false)
         service.getMe { [weak self] (success, error) in
             if success {
                 DispatchQueue.main.async {
@@ -97,7 +100,13 @@ class HomeViewController: UIViewController {
     
     func updateView(){
         //update View
-        print("updateView!!!!!!!!")
+        if let userHome = repository.getUserHome() {
+            nameLb.text = userHome.name
+            badgeLb.text = userHome.badges
+            reputationLb.text = userHome.reputation
+            ImageView.load(fromURL: userHome.profileImgURL)
+            viewsToHide.show(animated: true)
+        }
     }
 
 }

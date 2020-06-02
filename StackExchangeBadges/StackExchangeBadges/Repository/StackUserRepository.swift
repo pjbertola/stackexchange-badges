@@ -13,6 +13,7 @@ protocol StackUserRepository {
     var user: User? { get }
     var code: String? { get }
     var accessToken: String? { get }
+    func getUserHome() -> UserHome?
     
     //Write
     func setStackUser(_ user: User)
@@ -40,6 +41,12 @@ class StackUser: StackUserRepository {
         }
     }
     //Read
+    func getUserHome() -> UserHome? {
+        guard let user = user else {
+            return nil
+        }
+        return UserHome.from(user: user) as? UserHome
+    }
     
     //Write
     func setStackUser(_ user: User) {
