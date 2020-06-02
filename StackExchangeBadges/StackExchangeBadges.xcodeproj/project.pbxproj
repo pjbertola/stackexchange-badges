@@ -20,10 +20,16 @@
 		58B480DA2485FF8600BA8111 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480D92485FF8600BA8111 /* UserHome.swift */; };
 		58B480DC248603B900BA8111 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480DB248603B900BA8111 /* UserViewModel.swift */; };
 		58B480DF24860EA100BA8111 /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480DE24860EA100BA8111 /* Array+Utilities.swift */; };
+		58B480E12486144C00BA8111 /* Badget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480E02486144C00BA8111 /* Badget.swift */; };
 		58F52D322484935800E82594 /* LoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F52D312484935800E82594 /* LoginWebViewController.swift */; };
 		58F52D3524849E5600E82594 /* StackUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F52D3424849E5600E82594 /* StackUserRepository.swift */; };
 		58F52D382484A1E800E82594 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F52D372484A1E800E82594 /* User.swift */; };
 		58F52D3A2484A2D200E82594 /* BadgeCounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F52D392484A2D200E82594 /* BadgeCounts.swift */; };
+		58FD22BD248698A900803B0B /* MyBadget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FD22BC248698A900803B0B /* MyBadget.swift */; };
+		58FD22BF2486994700803B0B /* BadgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FD22BE2486994700803B0B /* BadgetViewModel.swift */; };
+		58FD22C22486AD9100803B0B /* BadgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FD22C12486AD9100803B0B /* BadgetTableViewCell.swift */; };
+		58FD22C42486AE1700803B0B /* BadgetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FD22C32486AE1700803B0B /* BadgetTableViewCell.xib */; };
+		58FD22C62486C2B600803B0B /* MyBadgetsViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FD22C52486C2B600803B0B /* MyBadgetsViewControllers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +48,16 @@
 		58B480D92485FF8600BA8111 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
 		58B480DB248603B900BA8111 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		58B480DE24860EA100BA8111 /* Array+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utilities.swift"; sourceTree = "<group>"; };
+		58B480E02486144C00BA8111 /* Badget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badget.swift; sourceTree = "<group>"; };
 		58F52D312484935800E82594 /* LoginWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebViewController.swift; sourceTree = "<group>"; };
 		58F52D3424849E5600E82594 /* StackUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackUserRepository.swift; sourceTree = "<group>"; };
 		58F52D372484A1E800E82594 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		58F52D392484A2D200E82594 /* BadgeCounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCounts.swift; sourceTree = "<group>"; };
+		58FD22BC248698A900803B0B /* MyBadget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBadget.swift; sourceTree = "<group>"; };
+		58FD22BE2486994700803B0B /* BadgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgetViewModel.swift; sourceTree = "<group>"; };
+		58FD22C12486AD9100803B0B /* BadgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgetTableViewCell.swift; sourceTree = "<group>"; };
+		58FD22C32486AE1700803B0B /* BadgetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadgetTableViewCell.xib; sourceTree = "<group>"; };
+		58FD22C52486C2B600803B0B /* MyBadgetsViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBadgetsViewControllers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,7 @@
 		5805B1B824843D39003C9FCC /* StackExchangeBadges */ = {
 			isa = PBXGroup;
 			children = (
+				58FD22C02486AD5000803B0B /* CustomCell */,
 				58B480DD24860E3100BA8111 /* Utilities */,
 				58B480D62485B08E00BA8111 /* ViewModels */,
 				58B480CF2485445A00BA8111 /* Networking */,
@@ -98,6 +111,7 @@
 			children = (
 				5805B1BD24843D39003C9FCC /* HomeViewController.swift */,
 				58F52D312484935800E82594 /* LoginWebViewController.swift */,
+				58FD22C52486C2B600803B0B /* MyBadgetsViewControllers.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -125,6 +139,8 @@
 			children = (
 				58B480D92485FF8600BA8111 /* UserHome.swift */,
 				58B480DB248603B900BA8111 /* UserViewModel.swift */,
+				58FD22BC248698A900803B0B /* MyBadget.swift */,
+				58FD22BE2486994700803B0B /* BadgetViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -152,8 +168,18 @@
 				58F52D372484A1E800E82594 /* User.swift */,
 				58F52D392484A2D200E82594 /* BadgeCounts.swift */,
 				58B480D42485818300BA8111 /* StackListings.swift */,
+				58B480E02486144C00BA8111 /* Badget.swift */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		58FD22C02486AD5000803B0B /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				58FD22C12486AD9100803B0B /* BadgetTableViewCell.swift */,
+				58FD22C32486AE1700803B0B /* BadgetTableViewCell.xib */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +242,7 @@
 			files = (
 				5805B1C624843D3A003C9FCC /* LaunchScreen.storyboard in Resources */,
 				5805B1C324843D3A003C9FCC /* Assets.xcassets in Resources */,
+				58FD22C42486AE1700803B0B /* BadgetTableViewCell.xib in Resources */,
 				5805B1C124843D39003C9FCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,15 +254,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B480E12486144C00BA8111 /* Badget.swift in Sources */,
+				58FD22BF2486994700803B0B /* BadgetViewModel.swift in Sources */,
 				58B480DF24860EA100BA8111 /* Array+Utilities.swift in Sources */,
 				5805B1BE24843D39003C9FCC /* HomeViewController.swift in Sources */,
 				58B480DA2485FF8600BA8111 /* UserHome.swift in Sources */,
 				58F52D322484935800E82594 /* LoginWebViewController.swift in Sources */,
+				58FD22C22486AD9100803B0B /* BadgetTableViewCell.swift in Sources */,
 				58F52D382484A1E800E82594 /* User.swift in Sources */,
 				5805B1BA24843D39003C9FCC /* AppDelegate.swift in Sources */,
 				58B480D12485448900BA8111 /* StackService.swift in Sources */,
 				58B480D52485818300BA8111 /* StackListings.swift in Sources */,
+				58FD22C62486C2B600803B0B /* MyBadgetsViewControllers.swift in Sources */,
 				5805B1BC24843D39003C9FCC /* SceneDelegate.swift in Sources */,
+				58FD22BD248698A900803B0B /* MyBadget.swift in Sources */,
 				58B480D82485FF3800BA8111 /* UIImageView+Utilities.swift in Sources */,
 				58B480DC248603B900BA8111 /* UserViewModel.swift in Sources */,
 				58F52D3A2484A2D200E82594 /* BadgeCounts.swift in Sources */,

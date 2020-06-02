@@ -17,6 +17,8 @@ struct AccesTokenData: Codable {
         case expires
     }
 }
-struct UserData: Codable {
-    var items: [User]
+
+struct BaseData<T: Codable>: Codable {
+    var items: [T]?
 }
+

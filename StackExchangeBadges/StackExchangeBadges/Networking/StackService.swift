@@ -18,6 +18,8 @@ class StackService{
         repository = stackRepository
     }
     
+    /// Get Access Token
+    /// - Parameter completion: handler
     func getAccessToken(completion: ServiceCompletionHandler?){
         guard let code = repository.code else {
             completion?(false, nil)
@@ -48,11 +50,12 @@ class StackService{
                            completion?(false,  error)
                        }
                    }
-
                }
                task.resume()
     }
     
+    /// Get My User
+    /// - Parameter completion: handler
     func getMe(completion: ServiceCompletionHandler?){
         guard let token = repository.accessToken else {
             completion?(false, nil)
@@ -67,10 +70,10 @@ class StackService{
                let task = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
                    do {
                        guard let data = data else { return }
-                       let userData = try JSONDecoder().decode(UserData.self, from: data)
+                    let userData = try JSONDecoder().decode(BaseData<User>.self, from: data)
                                        
                        DispatchQueue.main.async {
-                        if let user = userData.items.first {
+                        if let user = userData.items?.first {
                             self?.repository.setStackUser(user)
                                 completion?(true,  nil)
                             }else {
@@ -83,7 +86,40 @@ class StackService{
                            completion?(false,  error)
                        }
                    }
-
+               }
+               task.resume()
+    }
+    
+    /// Get My Badgets
+    /// - Parameter completion: handler
+    func getMyBadgets(completion: ServiceCompletionHandler?){
+        guard let token = repository.accessToken else {
+            completion?(false, nil)
+            return
+        }
+        let endpoint = StackEndpoint.myBaggets(token: token)
+               guard let url = endpoint.url else { return }
+               
+               var request = URLRequest(url: url)
+               request.httpMethod = endpoint.method.rawValue
+                
+               let task = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
+                   do {
+                       guard let data = data else { return }
+                       let badgetData = try JSONDecoder().decode(BaseData<Badget>.self, from: data)
+                                       
+                       DispatchQueue.main.async {
+                        if let badgetList = badgetData.items {
+                            self?.repository.setMyBadgets(badgetList)
+                       }
+                        completion?(true,  nil)
+                    }
+                   } catch {
+                     print("Unexpected error: \(error)")
+                       DispatchQueue.main.async {
+                           completion?(false,  error)
+                       }
+                   }
                }
                task.resume()
     }

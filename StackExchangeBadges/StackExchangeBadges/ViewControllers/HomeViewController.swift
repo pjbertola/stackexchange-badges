@@ -39,7 +39,12 @@ class HomeViewController: UIViewController {
             getMe()
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? MyBadgetsViewControllers {
+            vc.service = service
+            vc.repository = repository
+        }
+    }
     func showLogin() {
         viewsToHide.hide(animated: false)
         let loginVC = LoginWebViewController()

@@ -30,6 +30,7 @@ enum StackEndpoint {
     case oauth
     case accessToken(code: String)
     case me(token: String)
+    case myBaggets(token: String)
     
     var url: URL? {
         switch self {
@@ -38,13 +39,16 @@ enum StackEndpoint {
             
         case .accessToken(let code):
             return URL(string: "\(StackExchangeApp.baseURL.rawValue)/oauth/access_token/json?client_id=\(StackExchangeApp.clientId.rawValue)&client_secret=\(StackExchangeApp.clientSecret.rawValue)&redirect_uri=\(StackExchangeApp.redirect.rawValue)&code=\(code)")
+            
         case .me(let token):
             return URL(string: "\(StackExchangeApp.baseApi.rawValue)/me?order=desc&sort=reputation&site=stackoverflow&key=\(StackExchangeApp.publicKey.rawValue)&access_token=\(token)")
             
+        case .myBaggets(let token):
+            return URL(string: "\(StackExchangeApp.baseApi.rawValue)/me/badges?order=desc&sort=type&site=stackoverflow&key=\(StackExchangeApp.publicKey.rawValue)&access_token=\(token)")
+
         }
-        
-        
     }
+    
     var method: httpMethod {
         switch self {
         case .oauth:
@@ -53,8 +57,8 @@ enum StackEndpoint {
             return .POST
         case .me(_):
             return .GET
+        case .myBaggets(_):
+            return .GET
         }
     }
-    
-    
 }

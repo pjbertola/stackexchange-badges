@@ -14,7 +14,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gjT-jM-GUm">
+                                <rect key="frame" x="20.5" y="266.5" width="373" height="373"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gjT-jM-GUm" secondAttribute="height" multiplier="1:1" id="fsU-5f-5qf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gjT-jM-GUm" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="h9J-2f-PDJ"/>
+                            <constraint firstItem="gjT-jM-GUm" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="ivS-vG-l7R"/>
+                            <constraint firstItem="gjT-jM-GUm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ohu-y3-hop"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -23,4 +36,7 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="504" height="144"/>
+    </resources>
 </document>
