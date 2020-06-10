@@ -13,6 +13,7 @@
 		5805B1C124843D39003C9FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5805B1BF24843D39003C9FCC /* Main.storyboard */; };
 		5805B1C324843D3A003C9FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5805B1C224843D3A003C9FCC /* Assets.xcassets */; };
 		5805B1C624843D3A003C9FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5805B1C424843D3A003C9FCC /* LaunchScreen.storyboard */; };
+		587F02032491391100BF941C /* StackExchangeBadgesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587F02022491391100BF941C /* StackExchangeBadgesUITests.swift */; };
 		588AF8FE248ED425005F0E8B /* StackExchangeBadgesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588AF8FD248ED425005F0E8B /* StackExchangeBadgesTests.swift */; };
 		588AF907248ED9AC005F0E8B /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588AF906248ED9AC005F0E8B /* UserViewModelTests.swift */; };
 		58B480D12485448900BA8111 /* StackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B480D02485448900BA8111 /* StackService.swift */; };
@@ -35,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		587F02052491391100BF941C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5805B1AE24843D39003C9FCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5805B1B524843D39003C9FCC;
+			remoteInfo = StackExchangeBadges;
+		};
 		588AF900248ED425005F0E8B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5805B1AE24843D39003C9FCC /* Project object */;
@@ -53,6 +61,9 @@
 		5805B1C224843D3A003C9FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5805B1C524843D3A003C9FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5805B1C724843D3A003C9FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		587F02002491391100BF941C /* StackExchangeBadgesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackExchangeBadgesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		587F02022491391100BF941C /* StackExchangeBadgesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackExchangeBadgesUITests.swift; sourceTree = "<group>"; };
+		587F02042491391100BF941C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		588AF8FB248ED425005F0E8B /* StackExchangeBadgesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackExchangeBadgesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		588AF8FD248ED425005F0E8B /* StackExchangeBadgesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackExchangeBadgesTests.swift; sourceTree = "<group>"; };
 		588AF8FF248ED425005F0E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +95,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		587F01FD2491391100BF941C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		588AF8F8248ED425005F0E8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,6 +117,7 @@
 			children = (
 				5805B1B824843D39003C9FCC /* StackExchangeBadges */,
 				588AF8FC248ED425005F0E8B /* StackExchangeBadgesTests */,
+				587F02012491391100BF941C /* StackExchangeBadgesUITests */,
 				5805B1B724843D39003C9FCC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +127,7 @@
 			children = (
 				5805B1B624843D39003C9FCC /* StackExchangeBadges.app */,
 				588AF8FB248ED425005F0E8B /* StackExchangeBadgesTests.xctest */,
+				587F02002491391100BF941C /* StackExchangeBadgesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +168,15 @@
 				5805B1C424843D3A003C9FCC /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		587F02012491391100BF941C /* StackExchangeBadgesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				587F02022491391100BF941C /* StackExchangeBadgesUITests.swift */,
+				587F02042491391100BF941C /* Info.plist */,
+			);
+			path = StackExchangeBadgesUITests;
 			sourceTree = "<group>";
 		};
 		588AF8FC248ED425005F0E8B /* StackExchangeBadgesTests */ = {
@@ -237,6 +266,24 @@
 			productReference = 5805B1B624843D39003C9FCC /* StackExchangeBadges.app */;
 			productType = "com.apple.product-type.application";
 		};
+		587F01FF2491391100BF941C /* StackExchangeBadgesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 587F02092491391100BF941C /* Build configuration list for PBXNativeTarget "StackExchangeBadgesUITests" */;
+			buildPhases = (
+				587F01FC2491391100BF941C /* Sources */,
+				587F01FD2491391100BF941C /* Frameworks */,
+				587F01FE2491391100BF941C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				587F02062491391100BF941C /* PBXTargetDependency */,
+			);
+			name = StackExchangeBadgesUITests;
+			productName = StackExchangeBadgesUITests;
+			productReference = 587F02002491391100BF941C /* StackExchangeBadgesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		588AF8FA248ED425005F0E8B /* StackExchangeBadgesTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 588AF904248ED425005F0E8B /* Build configuration list for PBXNativeTarget "StackExchangeBadgesTests" */;
@@ -261,12 +308,16 @@
 		5805B1AE24843D39003C9FCC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Pablo Javier Bertola";
 				TargetAttributes = {
 					5805B1B524843D39003C9FCC = {
 						CreatedOnToolsVersion = 11.4;
+					};
+					587F01FF2491391100BF941C = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 5805B1B524843D39003C9FCC;
 					};
 					588AF8FA248ED425005F0E8B = {
 						CreatedOnToolsVersion = 11.4;
@@ -289,6 +340,7 @@
 			targets = (
 				5805B1B524843D39003C9FCC /* StackExchangeBadges */,
 				588AF8FA248ED425005F0E8B /* StackExchangeBadgesTests */,
+				587F01FF2491391100BF941C /* StackExchangeBadgesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -302,6 +354,13 @@
 				5805B1C324843D3A003C9FCC /* Assets.xcassets in Resources */,
 				58FD22C42486AE1700803B0B /* BadgeTableViewCell.xib in Resources */,
 				5805B1C124843D39003C9FCC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		587F01FE2491391100BF941C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +400,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		587F01FC2491391100BF941C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587F02032491391100BF941C /* StackExchangeBadgesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		588AF8F7248ED425005F0E8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +420,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		587F02062491391100BF941C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5805B1B524843D39003C9FCC /* StackExchangeBadges */;
+			targetProxy = 587F02052491391100BF941C /* PBXContainerItemProxy */;
+		};
 		588AF901248ED425005F0E8B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5805B1B524843D39003C9FCC /* StackExchangeBadges */;
@@ -528,6 +600,44 @@
 			};
 			name = Release;
 		};
+		587F02072491391100BF941C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StackExchangeBadgesUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pjb.StackExchangeBadgesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StackExchangeBadges;
+			};
+			name = Debug;
+		};
+		587F02082491391100BF941C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StackExchangeBadgesUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pjb.StackExchangeBadgesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StackExchangeBadges;
+			};
+			name = Release;
+		};
 		588AF902248ED425005F0E8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -583,6 +693,15 @@
 			buildConfigurations = (
 				5805B1CB24843D3A003C9FCC /* Debug */,
 				5805B1CC24843D3A003C9FCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		587F02092491391100BF941C /* Build configuration list for PBXNativeTarget "StackExchangeBadgesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				587F02072491391100BF941C /* Debug */,
+				587F02082491391100BF941C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

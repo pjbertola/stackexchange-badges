@@ -38,6 +38,16 @@
                ReferencedContainer = "container:StackExchangeBadges.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "587F01FF2491391100BF941C"
+               BuildableName = "StackExchangeBadgesUITests.xctest"
+               BlueprintName = "StackExchangeBadgesUITests"
+               ReferencedContainer = "container:StackExchangeBadges.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
